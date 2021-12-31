@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login and registration form for gec subject</title>
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+          <h2 style="text-align:center">User Profile </h>
+
+          <div class="card">
+            <img src="fgg.png" alt="Dr.Neeraj"style="width:500%" >
+            <h6>Dr.Neeraj kumar</h6>
+            <h6>Assistant Professor,CUH</h6>
+          
+            <div style="margin: 15px 0"> 
+              <a href="#"><i class="fa fa-twitter"></i></a>  
+              <a href="#"><i class="fa fa-linkedin"></i></a>   
+            </div>
+          </div>
+
+          </div>
+<div class="title login">
+            
+  Add Gec Subject
+           </div>
+        <div class="form-container">
+           <div class="slide-controls">
+              <input type="radio" name="slide" id="add gec subject" checked>
+            
+              <label for="login" class="slide login">Add Gec Subject</label>
+              <input type="radio" name="slide" id="add gec table " checked>
+            
+              <label for="login" class="slide login">Add Gec table</label>
+              <table id="myTable">
+                <tr>
+                  <td>Sub1</td>
+                  <td>sub2</td>
+                </tr>
+                <tr>
+                  <td>ppt</td>
+                  <td>ee</td>
+                </tr>
+                
+              </table>
+              <br>
+              
+              <button onclick="myCreateFunction()">Create row</button>
+              <button onclick="myDeleteFunction()">Delete row</button>
+
+             
+              <div class="slider-tab"></div>
+           </div>
+           <div class="form-inner">
+              <form action="#" class="login">
+            <button id="myBtn">Edit or delete</button>
+      
+                
+                 <div id="myModal" class="modal">
+                 
+                  
+                   <div class="modal-content">
+                     <span class="close">&times;</span>
+                     <p>ADD GEC subject</p>
+                     <form action="#" class="signup1">
+                       <div class="field">
+                           <input type="text" placeholder="Subject code"required>
+                        </div>
+                        <div class="field">
+                           <input type="text" placeholder="Subject name"required>
+                        </div>
+                         <div class="field">
+                            <input type="text" placeholder="semester"required>
+                         </div>
+                         <div class="field">
+                          <input type="text" placeholder="department"required>
+                         </div>
+                         Applicable for:
+                         <label class="container">ok
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">cancel
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+
+
+                   </div>
+                 
+                 </div>
+                   </div>
+                </div>
+              </form>
+
+
+
+
+<script>  
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+function myCreateFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+}
+
+function myDeleteFunction() {
+  document.getElementById("myTable").deleteRow(0);
+}
+</script>
+</body>
+</html>

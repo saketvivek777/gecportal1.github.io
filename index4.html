@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title> GEC PORTAL Registration Form in HTML</title>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      
+         <div class="wrapper">
+            <div class="title-text">
+               <div class="title login">
+                 GEC Login Form
+               </div>
+                
+               <div class="title signup">
+                  Signup as student
+               </div>
+            
+            </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+          
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form action="connect.php" class="login" method="post">
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required  name="EmailAddress"> 
+                  </div>
+                
+                  <div class="field">
+                     <input type="password" placeholder="Password" required  name="Password" >
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login1" id="myButton">
+                    
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login2" id="myBtn">
+                    
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                     <img  src="hcj.png" width="360" height="945">
+                  </div>
+               </form>
+               <form action="connect.php" class="signup" method="post" id="submit">
+                <div class="field">
+                    <input type="text" placeholder="first name"  required  name="firstname" >
+                 </div>
+                 <div class="field">
+                    <input type="text" placeholder="last name" required    name="lastname">
+                 </div>
+                  <div class="field">
+                     <input type="text" placeholder="Email Address" required  name="EmailAddress" > 
+                  </div>
+                <div>
+                  phone:
+                <input type="text" name="phone" placeholder="phone no." size="10" required    ><br>
+                
+               </div><b>
+                select :  
+               </label>  
+               <div>
+               <select>  
+               <option value="select">select</option>    
+               <option value="Student">Student</option>  
+               <option value="Teacher">Teacher</option>  
+               
+               </select>   
+               
+               <label><br> 
+               Cureent Semester :  
+                </label>   
+                  
+                <select>  
+                <option value="semester">semester</option>    
+                <option value="3rd sem">3rd sem</option>  
+                <option value="5th sem">5th sem</option>  
+                <option value="7th sem">7th sem</option>   
+                </select>   
+                </div>
+              <div>  
+                <label>   
+                Branch:  
+                </label>   
+                  
+                <select>  
+                <option value="option">option</option>    
+                <option value="CSE">cse</option>  
+                <option value="Civil">civil</option>  
+                <option value="elerctrical">electrical</option>   
+                </select>   
+                </div>
+                <div> 
+
+                <label for="current session">
+               current session:</label>  
+                <select>
+                  <option value="Year">Year</option>    
+                  <option value="2018-19">2018-19</option>  
+                  <option value="2019-20">2019-20</option>  
+                  <option value="2020-21">2020-21</option>
+                  <option value="2021">2021-22</opti on>
+                </select> 
+                </div>
+                <div>  
+                  <label>   
+                  Program:  
+                  </label>   
+                    
+                  <select>  
+                  <option value="option">option</option>    
+                  <option value="UG">Ug</option>  
+                  <option value="PG">Pg</option>   
+                  </select> 
+               
+                  </div> 
+                  <label>
+                <div class="field">
+                     <input type="password" placeholder="Password" required name="Password" >
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Confirm password" required  name="Confirmpassword" >
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup" >
+                  </div>
+               </form>
+                   
+               <div class="title signup">
+               Signup as teacher
+               </div>
+            <form action="connect.php" class="signup" method="post"></form>
+            <form action="#" class="signup" >
+             <div class="field">
+                 <input type="text" placeholder="first name" required>
+              </div>
+              <div class="field">
+                 <input type="text" placeholder="last name" required>
+              </div>
+               <div class="field">
+                  <input type="text" placeholder="Email Address" required>
+               </div>
+             <div>
+             <input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/><br>
+             <input type="text" name="phone" placeholder="phone no." size="10" required><br>
+             </div>
+             <div class="field">
+               <input type="text" placeholder="empolyee id" required>
+            </div>
+            <div class="field">
+               <input type="password" placeholder="Password" required>
+            </div>
+            <div class="field">
+               <input type="password" placeholder="Confirm password" required>
+            </div>
+            <div class="field btn">
+               <div class="btn-layer"></div>
+               <input type="submit" value="Signup" id="addup">
+            </div>
+         </form>
+   
+            </div>
+           
+         </div>
+   
+   
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return  false;
+         });
+      </script>
+      <script type="text/javascript">
+         document.getElementById("myButton").onclick = function () {
+        
+         location.href ="file:///C:/Users/Samsung/Downloads/gec%20portal/index2.html";    
+         };
+         
+         document.getElementById("myBtn").onclick = function () {
+         location.href ="file:///C:/Users/Samsung/Downloads/gec%20portal/index3.html?#";   
+         };
+    
+
+
+         var form = document.getElementById('submit');
+form.addEventListener('signup', showMessage);
+
+function showMessage(event) {
+  alert("Your response has been recorded");
+  event.preventDefault();
+}
+     </script>  
+     
+    
+   </body>
+</html>

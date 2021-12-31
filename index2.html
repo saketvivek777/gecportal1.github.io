@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+         <h2 style="text-align:center">Student Profile </h>
+
+            <div class="card">
+              <img src="st.jpg" alt="SAMEER"style="width:500%" >
+              <h6>SAMEER B.tech ,CUH</h6>
+            </div>
+
+
+
+           <div class="title login">
+            Student's  Data page
+           </div>
+           
+        </div>
+        <div class="form-container">
+           <div class="slide-controls">
+              <input type="radio" name="slide" id="add gec subject" checked>
+            
+              <label for="login" class="slide login"> Gec Subject</label>
+             
+              <div class="slider-tab"></div>
+           </div>
+           <div class="form-inner">
+              <form action="#" class="login">
+        
+                 <div id="myModal" class="modal">
+        
+                     <p>GEC SUB DATA</p>
+                     <br>
+                     <form action="#" class="signup1">
+                       <div class="field">
+                           <input type="text" placeholder="Subject code"required>
+                        </div><br>
+                        <div class="field">
+                           <input type="text" placeholder="Subject name"required>
+                        </div><br>
+                        choose sub:  
+                             <label>   
+                       
+                              <select>  
+                     <option value="choose">option</option>    
+                     <option value="ppt">ppt</option>  
+                     <option value="ee">ee</option>  
+                        
+                     </select>   
+                     </div><br>
+
+
+                         <div class="field">
+                            <input type="text" placeholder="semester"required>
+                         </div><br>
+                         <div class="field">
+                          <input type="text" placeholder="department"required>
+                         </div><br>
+                         Program:
+                         <label class="container">ug
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">pg
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                   </div>
+                 
+                 </div>
+                   </div>
+                </div>
+              </form>
+
+
+
+              <script>  
+
+
+               var modal = document.getElementById("myModal");
+               var btn = document.getElementById("myBtn");
+               var span = document.getElementsByClassName("close")[0];
+               btn.onclick = function() {
+                 modal.style.display = "block";
+               }
+               
+               span.onclick = function() {
+                 modal.style.display = "none";
+               }
+               window.onclick = function(event) {
+                 if (event.target == modal) {
+                   modal.style.display = "none";
+                 }
+               }
+            </script>
+</body>
+</html>
